@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="photo.jpeg" width="150" alt="Sandeep Thakur" />
+  <img src="photo.jpeg" width="150" height="150" alt="Sandeep Thakur" />
 </p>
 
 <h1 align="center">👋 Hi, I'm Sandeep Thakur</h1>
