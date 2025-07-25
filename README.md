@@ -71,7 +71,7 @@ I'm a seasoned Flutter developer with over **5 years of experience**, building e
 
 | Project       | Description                                           | Tech Stack                         | Link              |
 |---------------|-------------------------------------------------------|-------------------------------------|-------------------|
-| LiveTracker   | Real-time user & driver tracking with geofencing      | Flutter + Firebase + GetX          | [View](#)         |
+| LiveTracker   | Real-time user & driver tracking with geofencing      | Flutter + Firebase + GetX          | [View](https://apps.apple.com/us/app/hive-personal-safety-app/id6737192311)         |
 | IoTControl    | Remote app to control smart home devices              | Flutter + Bluetooth + GetX         | [View](#)         |
 | VideoMeet     | Video call app with chat                              | Flutter + WebRTC + Firebase        | [View](#)         |
 | EcomPro       | Full-stack e-commerce solution                        | Flutter + Supabase + Bloc          | [View](#)         |
