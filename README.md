@@ -1,4 +1,3 @@
-
 <p align="center">
   <img src="photo.jpeg" width="150" height="150" alt="Sandeep Thakur - Flutter Developer" />
 </p>
