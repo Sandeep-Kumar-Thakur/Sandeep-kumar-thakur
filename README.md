@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="photo.jpeg" width="150" height="150" alt="Sandeep Thakur - Flutter Developer" />
-</p>
+
 
 <h1 align="center">👋 Hi, I'm Sandeep Thakur</h1>
 <h3 align="center">Senior Flutter Developer | 5+ Years of Experience | Cross-Platform Specialist</h3>
