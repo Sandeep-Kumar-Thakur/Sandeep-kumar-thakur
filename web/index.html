@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="sandeep">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <title>sandeep</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background-color: #ffffff;
+      font-family: sans-serif;
+    }
+
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      z-index: 9999;
+    }
+
+    .circular-loader {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 8px solid #f0f0f0;
+      border-top: 8px solid #40c4ff;
+      animation: spin 1s linear infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .circular-loader img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .percentage {
+      margin-top: 16px;
+      font-size: 18px;
+      color: #40c4ff;
+    }
+
+    .loader-title {
+      margin-top: 8px;
+      font-size: 18px;
+      color: #40c4ff;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="circular-loader">
+    <img src="flutter.png" alt="Flutter Logo" />
+  </div>
+  <div class="percentage" id="percentage">0%</div>
+  <div class="loader-title">Initializing Sandeep Portfolio...</div>
+</div>
+
+<!-- Flutter canvas target -->
+<flutter-view id="flutter_view"></flutter-view>
+
+<!-- Flutter initialization script -->
+<script src="flutter_bootstrap.js" async></script>
+
+<!-- Simulate loading percentage -->
+<script>
+  let percentage = 0;
+  const percentageText = document.getElementById('percentage');
+  const interval = setInterval(() => {
+    if (percentage < 90) {
+      percentage += Math.floor(Math.random() * 5) + 1;
+      if (percentage > 90) percentage = 90;
+      percentageText.innerText = `${percentage}%`;
+    }
+  }, 100);
+
+  // Hide loader after Flutter paints the first frame
+  window.addEventListener("flutter-first-frame", function () {
+    clearInterval(interval);
+    percentageText.innerText = `100%`;
+    setTimeout(() => {
+      const loader = document.getElementById("loader");
+      if (loader) loader.style.display = "none";
+    }, 300); // optional delay
+  });
+</script>
+
+</body>
+</html>
