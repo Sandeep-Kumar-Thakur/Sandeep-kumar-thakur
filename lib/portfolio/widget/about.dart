@@ -1,16 +1,26 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'dart:html' as html;
 import '../../generated/assets.dart';
 
 class About extends StatelessWidget {
   const About({super.key});
 
+  void _launchUrl(String url) {
+    final anchor = html.AnchorElement(href: url)
+      ..target = '_blank'
+      ..rel = 'noopener noreferrer'
+      ..click();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.black,
-      padding:  EdgeInsets.symmetric(horizontal: 20, vertical: 40).copyWith(left: 0),
+      padding: EdgeInsets.symmetric(
+        horizontal: 20,
+        vertical: 40,
+      ).copyWith(left: 0),
       child: LayoutBuilder(
         builder: (context, constraints) {
           final isMobile = constraints.maxWidth < 800;
@@ -79,12 +89,17 @@ class About extends StatelessWidget {
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blueAccent,
-                          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 24,
+                            vertical: 12,
+                          ),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          _launchUrl("https://wa.me/918288824320");
+                        },
                         child: const Text(
                           "CONTACT ME",
                           style: TextStyle(
