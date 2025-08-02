@@ -2,6 +2,7 @@
 class Assets {
   Assets._();
 
+  static const String fontsPoppinsRegular = 'assets/fonts/Poppins-Regular.ttf';
   static const String iconsFlutter = 'assets/icons/flutter.png';
   static const String imagesNewProfile = 'assets/images/new_profile.png';
 

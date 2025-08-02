@@ -10,7 +10,7 @@ class About extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.black,
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+      padding:  EdgeInsets.symmetric(horizontal: 20, vertical: 40).copyWith(left: 0),
       child: LayoutBuilder(
         builder: (context, constraints) {
           final isMobile = constraints.maxWidth < 800;
@@ -100,9 +100,10 @@ class About extends StatelessWidget {
               const SizedBox(height: 20),
               Expanded(
                 flex: isMobile ? 0 : 1,
-                child: Center(
+                child: Align(
+                  alignment: Alignment.bottomRight,
                   child: Stack(
-                    alignment: Alignment.center,
+                    alignment: Alignment.bottomRight,
                     children: [
                       Positioned(
                         bottom: -30,
@@ -112,13 +113,11 @@ class About extends StatelessWidget {
                           backgroundColor: Colors.white12,
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.asset(
-                          Assets.imagesNewProfile,
-                          height: isMobile ? 300 : 500,
-                          fit: BoxFit.contain,
-                        ),
+                      Image.asset(
+                        alignment: Alignment.bottomRight,
+                        Assets.imagesNewProfile,
+                        height: isMobile ? 300 : 500,
+                        fit: BoxFit.contain,
                       ),
                     ],
                   ),

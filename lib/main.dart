@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
       title: "Sandeep's Portfolio",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'poppins',
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         textTheme: TextTheme(
           bodyLarge: TextStyle(color: Colors.white),
