@@ -185,6 +185,7 @@ class _ProjectOverviewWidgetState extends State<ProjectOverviewWidget> {
                   const SizedBox(height: 20),
                   Text(
                     project.description,
+
                     style: const TextStyle(
                       color: Colors.white,
                       height: 1.5,
