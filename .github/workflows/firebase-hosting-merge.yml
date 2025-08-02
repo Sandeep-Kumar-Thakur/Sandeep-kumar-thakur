@@ -35,12 +35,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Setup Flutter
+      # Setup Flutter with latest stable
       - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: 'stable'
-          channel: 'stable'
+          flutter-version: '3.32.8'
 
       # Install dependencies
       - name: Install dependencies
@@ -48,7 +47,7 @@ jobs:
 
       # Build Flutter web
       - name: Build Flutter Web
-        run: flutter build web
+        run: flutter build web --release
 
       # Deploy to Firebase Hosting
       - name: Deploy to Firebase
