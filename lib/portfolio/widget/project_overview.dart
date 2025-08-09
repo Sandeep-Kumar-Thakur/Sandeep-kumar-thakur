@@ -28,7 +28,6 @@ class _ProjectOverviewWidgetState extends State<ProjectOverviewWidget> {
     final screenWidth = MediaQuery.of(context).size.width;
 
     final isMobile = screenWidth < 600;
-    final isTablet = screenWidth < 1024 && screenWidth >= 600;
 
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),

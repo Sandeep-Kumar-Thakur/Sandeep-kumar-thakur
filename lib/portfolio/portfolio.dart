@@ -109,7 +109,7 @@ class _PortfolioState extends State<Portfolio> {
               ),
 
               ListView.builder(
-
+                physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: projectList.length,
                 // prototypeItem: ProjectOverviewWidget(project: projectList.first),

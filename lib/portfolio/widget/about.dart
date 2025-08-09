@@ -98,7 +98,7 @@ class About extends StatelessWidget {
                           ),
                         ),
                         onPressed: () {
-                          _launchUrl("https://wa.me/918288824320");
+                          _launchUrl("https://wa.me/918288814320");
                         },
                         child: const Text(
                           "CONTACT ME",
